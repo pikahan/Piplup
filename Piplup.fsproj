@@ -6,8 +6,20 @@
   </PropertyGroup>
 
   <ItemGroup>
+
+    <FsYacc Include="PiplupParse.fsy">
+      <OtherFlags>--module PiplupParse</OtherFlags>
+    </FsYacc>
+    <FsLex Include="PiplupLex.fsl">
+      <OtherFlags>--module PiplupLex --unicode</OtherFlags>
+    </FsLex>
+
     <Compile Include="Absyn.fs" />
+    <Compile Include="PiplupParse.fsi" />
+    <Compile Include="PiplupParse.fs" />
+    <Compile Include="PiplupLex.fs" />    
     <Compile Include="Program.fs" />
+
   </ItemGroup>
 
   <ItemGroup>

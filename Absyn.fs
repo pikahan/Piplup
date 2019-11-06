@@ -1,23 +1,23 @@
 module Absyn 
 
-type PExpr = 
+type expr = 
   | CstI of int
   | CstB of bool
   | Var of string
-  | Let of string * PExpr * PExpr
-  | Prim of string * PExpr * PExpr
-  | If of PExpr * PExpr * PExpr
-  | Letfun of string * string * PExpr * PExpr    (* (f, x, fBody, letBody) *)
-  | Call of PExpr * PExpr
+  | Let of string * expr * expr
+  | Prim of string * expr * expr
+  | If of expr * expr * expr
+  | Letfun of string * string * expr * expr    (* (f, x, fBody, letBody) *)
+  | Call of expr * expr
 
-and POper =
-    | PlusOp
-    | MinusOp
-    | TimesOp
-    | DivideOp
-    | EqOp
-    | NeqOp
-    | GtOp
-    | GeOp
-    | LtOp
-    | LeOp
+// and POper =
+//     | PlusOp
+//     | MinusOp
+//     | TimesOp
+//     | DivideOp
+//     | EqOp
+//     | NeqOp
+//     | GtOp
+//     | GeOp
+//     | LtOp
+//     | LeOp
